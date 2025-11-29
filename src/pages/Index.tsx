@@ -24,7 +24,7 @@ const Index = () => {
             title="Sipadan Kapalai Dive Resort"
             description="Experience paradise at our exclusive tropical resort. Pristine beaches, crystal-clear waters, and world-class amenities await you in this secluded island sanctuary."
             buttonText="Explore"
-            buttonLink="https://www.sipadan-kapalai.com"
+            buttonLink="https://kapalai-testing.vercel.app"
             backgroundImage={kapalaiResort}
             position="left"
           />
@@ -36,7 +36,7 @@ const Index = () => {
             title="Pearl Island Resort"
             description="Located beside Bohey Dulang National Park, this new luxury retreat offers unrivaled access to adventure. Hike for breathtaking panoramic views of the mountains, sea, and sky, then relax in your tropical Semporna haven."
             buttonText="Explore"
-            buttonLink="https://www.pearlislandresorts.com"
+            buttonLink="https://pearl-testing.vercel.app"
             backgroundImage={pearlIsland}
             position="right"
           />
