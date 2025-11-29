@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 220 30% 20%;
+    --primary-foreground: 40 20% 95%;
+
+    --secondary: 40 15% 92%;
+    --secondary-foreground: 220 30% 20%;
+
+    --muted: 40 10% 95%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 42 88% 65%;
+    --accent-foreground: 220 30% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 20% 95%;
+
+    --border: 40 10% 85%;
+    --input: 40 10% 85%;
+    --ring: 42 88% 65%;
+
+    --radius: 0.5rem;
+
+    /* Luxury resort theme colors */
+    --resort-overlay: 220 30% 10%;
+    --resort-text: 40 20% 98%;
+    --gold-accent: 42 88% 65%;
+    --cream: 40 15% 92%;
+    
+    /* Gradients */
+    --gradient-overlay: linear-gradient(135deg, hsl(220 30% 10% / 0.75), hsl(220 30% 10% / 0.45));
+    
+    /* Shadows */
+    --shadow-luxury: 0 20px 60px -15px hsl(220 30% 10% / 0.4);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 40 20% 95%;
+
+    --card: 220 30% 10%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 220 30% 10%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 40 20% 95%;
+    --primary-foreground: 220 30% 20%;
+
+    --secondary: 220 25% 15%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 220 25% 15%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 42 88% 65%;
+    --accent-foreground: 220 30% 20%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 40 20% 95%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 42 88% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .resort-overlay {
+    @apply relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-resort-overlay/75 before:to-resort-overlay/45 before:z-0;
+  }
+
+  .text-resort {
+    @apply text-resort-text;
+  }
+
+  .gold-accent {
+    @apply text-gold-accent;
+  }
+
+  .btn-luxury {
+    @apply bg-gold-accent hover:bg-gold-accent/90 text-primary font-semibold px-8 py-3 rounded-sm transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl;
+  }
+
+  .fade-enter {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .fade-exit {
+    animation: fadeOut 0.6s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+  }
+}
+
+@keyframes loadingRing {
+  0% {
+    stroke-dashoffset: 440;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
