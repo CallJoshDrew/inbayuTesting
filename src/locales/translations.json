@@ -1,0 +1,32 @@
+{
+  "en": {
+    "translation": {
+      "ourResorts": "Our Resorts",
+      "sipadan": {
+        "title": "Sipadan Kapalai Dive Resort",
+        "description": "Experience paradise at our exclusive tropical resort. Pristine beaches, crystal-clear waters, and world-class amenities await you in this secluded island sanctuary.",
+        "explore": "Explore"
+      },
+      "pearl": {
+        "title": "Pearl Island Resort",
+        "description": "Located beside Bohey Dulang National Park, this new luxury retreat offers unrivaled access to adventure. Hike for breathtaking panoramic views of the mountains, sea, and sky, then relax in your tropical Semporna haven.",
+        "explore": "Explore"
+      }
+    }
+  },
+  "zh": {
+    "translation": {
+      "ourResorts": "我们的度假村",
+      "sipadan": {
+        "title": "卡帕莱度假村",
+        "description": "在我们独特的热带度假村体验天堂。原始海滩、清澈见底的海水和世界级设施在这个隐秘的岛屿庇护所等着您。",
+         "explore": "探索"
+      },
+      "pearl": {
+        "title": "珍珠岛度假村",
+        "description": "位于珍珠岛国家公园旁，这个新的豪华度假胜地提供无与伦比的冒险机会。登山欣赏群山、大海和天空的壮观全景，然后在您的热带仙本那天堂放松身心。",
+         "explore": "探索"
+      }
+    }
+  }
+}

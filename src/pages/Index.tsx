@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import ResortSection from "@/components/ResortSection";
 import Footer from "@/components/Footer";
 import kapalaiResort from "@/assets/sipadan_kapalai.png";
 import pearlIsland from "@/assets/pearl_island.png";
+import "@/i18n/config";
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { t } = useTranslation();
 
   if (isLoading) {
     return <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />;
@@ -21,9 +24,9 @@ const Index = () => {
         {/* Sipadan Kapalai */}
         <div className="h-[44vh] md:h-auto md:flex-1">
           <ResortSection
-            title="Sipadan Kapalai Dive Resort"
-            description="Experience paradise at our exclusive tropical resort. Pristine beaches, crystal-clear waters, and world-class amenities await you in this secluded island sanctuary."
-            buttonText="Explore"
+            title={t("sipadan.title")}
+            description={t("sipadan.description")}
+            buttonText={t("sipadan.explore")}
             buttonLink="https://kapalai-testing.vercel.app"
             backgroundImage={kapalaiResort}
             position="left"
@@ -33,9 +36,9 @@ const Index = () => {
         {/* Pearl Island */}
         <div className="h-[44vh] md:h-auto md:flex-1">
           <ResortSection
-            title="Pearl Island Resort"
-            description="Located beside Bohey Dulang National Park, this new luxury retreat offers unrivaled access to adventure. Hike for breathtaking panoramic views of the mountains, sea, and sky, then relax in your tropical Semporna haven."
-            buttonText="Explore"
+            title={t("pearl.title")}
+            description={t("pearl.description")}
+            buttonText={t("pearl.explore")}
             buttonLink="https://pearl-testing.vercel.app"
             backgroundImage={pearlIsland}
             position="right"
@@ -43,7 +46,6 @@ const Index = () => {
         </div>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
