@@ -25,7 +25,7 @@ const Navbar = () => {
           </div>
           {/* <div className="text-[#313131] font-cormorant text-xl md:text-2xl font-medium tracking-wide text-center">An INBAYU Collection</div> */}
           <div className="flex-1 flex justify-end">
-            <button onClick={toggleLanguage} className="px-4 py-2">
+            <button onClick={toggleLanguage} className="px-4 py-2 md:text-base text-xs">
               {isEnglish ? "ENG" : "中文"}
             </button>
             <Sheet open={open} onOpenChange={setOpen}>
@@ -39,10 +39,10 @@ const Navbar = () => {
                   <SheetTitle className="text-[#313131] font-cormorant text-xl text-left">{t("ourResorts")}</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-6 mt-8">
-                  <a href="https://www.sipadan-kapalai.com" rel="noopener noreferrer" onClick={() => setOpen(false)} className="text-[#313131] opacity-90 hover:opacity-100 transition-colors text-lg font-normal">
+                  <a href="https://kapalai-testing.vercel.app" rel="noopener noreferrer" onClick={() => setOpen(false)} className="text-[#313131] opacity-90 hover:opacity-100 transition-colors text-lg font-normal">
                     {t("sipadan.title")}
                   </a>
-                  <a href="https://www.pearlislandresorts.com/" rel="noopener noreferrer" onClick={() => setOpen(false)} className="text-[#313131] opacity-90 hover:opacity-100  transition-colors text-lg font-normal">
+                  <a href="https://pearl-testing.vercel.app" rel="noopener noreferrer" onClick={() => setOpen(false)} className="text-[#313131] opacity-90 hover:opacity-100  transition-colors text-lg font-normal">
                     {t("pearl.title")}
                   </a>
                 </div>
